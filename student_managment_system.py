@@ -61,8 +61,33 @@ class EngineeringStudent(Students) :
     def yearlyFee(self) :
         return self.tutionFee
     
-
-
+# medical student class. 
+class MedicalStudent(Students) : 
+    
+    totalStudent = 0
+    def __init__(self, studentName, studentAge, studentPassportNumber, studentIdNumber, studetnGPA, studentCGPA, currentSemester, creditTaken, courseTaken, tuitionFee):
+        super().__init__(studentName, studentAge, studentPassportNumber, studentIdNumber, studetnGPA, studentCGPA, currentSemester)
+        self.creditTaken = creditTaken 
+        self.courseTaken = courseTaken 
+        self.tuitionFee = tuitionFee 
+        MedicalStudent.totalStudent += 1 
+    
+    # total student in medical class. 
+    def totalNumberOfStudents(self) : 
+        return MedicalStudent.totalNumberOfStudents
+    
+    # yearly fee
+    def yearlyFee(self): 
+        return self.tuitionFee 
+    
+    # course taken 
+    def courseTakenByStudent(self) :
+        return self.courseTaken 
+    
+    # credit taken
+    def totalCreditTaken(self) :
+        return self.creditTaken
+    
 student1 = Students('Mohammed', 23, 23342123, 'BE12234C', 3.5, 3.1)
 
 print(student1.studentInfo())
