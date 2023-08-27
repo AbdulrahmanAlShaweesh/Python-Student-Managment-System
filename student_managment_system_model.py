@@ -106,10 +106,9 @@ class Bussiness(Students) :
         return self.course 
     
     # total engineering students. 
-    def totalNumberOfStudents(self) :
+    def totalNumberStudents(self) :
         return EngineeringStudent.totalNumberOfStudents
     
     # student yearly fee
     def yearlyFee(self) :
         return self.tutionFee
-    
