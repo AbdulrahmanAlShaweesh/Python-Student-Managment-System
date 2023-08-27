@@ -87,8 +87,29 @@ class MedicalStudent(Students) :
     # credit taken
     def totalCreditTaken(self) :
         return self.creditTaken
+# bussiness student
+class Bussiness(Students) :
+    totalNumberOfStudents = 0
+    def __init__(self, studentName, studentAge, studentPassportNumber, studentIdNumber, studetnGPA, studentCGPA, currentSemester, creditTaken, courseTaken, tutionFee):
+        super().__init__(studentName, studentAge, studentPassportNumber, studentIdNumber, studetnGPA, studentCGPA, currentSemester)
+        self.creditTaken = creditTaken
+        self.courseTaken = courseTaken
+        self.tutionFee = tutionFee
+        Bussiness.totalNumberOfStudents
+        
+    # total credit taken by student
+    def creditTakenByStudent(self) :
+        return self.creditTaken 
     
-student1 = Students('Mohammed', 23, 23342123, 'BE12234C', 3.5, 3.1)
-
-print(student1.studentInfo())
+    # course taken by student
+    def studentField(self) : 
+        return self.course 
+    
+    # total engineering students. 
+    def totalNumberOfStudents(self) :
+        return EngineeringStudent.totalNumberOfStudents
+    
+    # student yearly fee
+    def yearlyFee(self) :
+        return self.tutionFee
     
