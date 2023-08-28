@@ -112,3 +112,4 @@ class Bussiness(Students) :
     # student yearly fee
     def yearlyFee(self) :
         return self.tutionFee
+    
